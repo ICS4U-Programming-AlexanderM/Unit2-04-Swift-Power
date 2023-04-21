@@ -6,12 +6,12 @@ import Foundation
 //
 //  This program calculates a number based off of a chosen base and exponent.
 
-// Enum for error checking
+// Enum for error checking.
 enum InputError: Error {
   case InvalidInput
 }
 
-// Input in separate function for error checking
+// Input in separate function for error checking.
 func convert(strUnconverted: String) throws -> Int {
   guard let numConverted = Int(strUnconverted.trimmingCharacters(in: CharacterSet.newlines)) else {
     throw InputError.InvalidInput
